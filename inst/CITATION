@@ -1,0 +1,31 @@
+citHeader("To cite the 'locits' package in publications use:")
+
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
+vers <- paste("R package version", meta$Version)
+
+citEntry(entry="Manual",
+         title = "PP3: Three-dimensional exploratory projection pursuit",
+
+         author = personList(as.person("Guy Nason")),
+         year = year,
+         note = vers,
+
+         textVersion =
+         paste("Guy Nason (",
+               year,
+               "). PP3: Three-dimensional exploratory projection pursuit.",
+               vers, ".", sep=""))
+
+citEntry(entry="Article",
+         title = "Three-dimensional projection pursuit",
+         author = personList(as.person("G. P. Nason")),
+	 journal = "Journal of the Royal Statistical Society, Series C",
+	volume=44,
+         year     = "1995",
+	pages="411--430",
+         url      = "http://www.stats.bris.ac.uk/~guy",
+         textVersion =
+         paste("Nason, G.P. (1995)",
+  	       "Three-dimensional projection pursuit.",
+               "Journal of the Royal Statistical Society, Series C 44:411--430")
+)
